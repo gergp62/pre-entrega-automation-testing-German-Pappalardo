@@ -60,14 +60,9 @@ source venv/bin/activate
 ### 3. Instalar Dependencias
 Este proyecto utiliza un archivo `requirements.txt` para manejar las dependencias.
 
-*Si aún no lo has creado, crea un archivo `requirements.txt` con este contenido:*
-```txt
-pytest
-selenium
-pytest-html
-```
 
-*Luego, ejecuta el siguiente comando para instalar todo lo necesario:*
+
+*Ejecutar el siguiente comando para instalar todo lo necesario:*
 ```bash
 pip install -r requirements.txt
 ```
@@ -79,7 +74,7 @@ pip install -r requirements.txt
 Para ejecutar la suite de pruebas completa y generar un reporte HTML, utiliza el siguiente comando desde la terminal (asegúrate de estar en la carpeta raíz del proyecto):
 
 ```bash
-pytest pre-entrega-final/test_saucedemo.py -v --html=reporte.html
+pytest pre-entrega-German-Pappalardo/test_saucedemo.py -v --html=reporte.html
 ```
 
 * `-v`: (Verbose) Muestra un resultado más detallado por cada test.

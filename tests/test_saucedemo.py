@@ -4,9 +4,7 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-
-# Importamos el login desde la carpeta utils
-from utils.login_saucedemo import login_standard_user
+from utils.login_saucedemo import login_standard_user  # Importamos el login desde la carpeta utils
 
 # --- Fixtures de Pytest (Setup y Teardown) ---
 
@@ -78,11 +76,10 @@ def test_navegacion_y_catalogo(logged_in_driver):
     assert filtro_productos.is_displayed(), "El filtro de productos no está visible"
 
     # Criterio 4: Lista nombre/precio del primero
-    # Usamos los selectores más específicos que proveíste
     first_product_name = driver.find_element(By.CLASS_NAME, "inventory_item_name").text
     first_product_price = driver.find_element(By.CLASS_NAME, "inventory_item_price").text
     
-    # Imprimimos en consola (se verá si corres con -s)
+    # Imprimimos en consola (se verá si se ejecuta con el parámetro -s)
     print(f"\n[Info] Primer producto: {first_product_name} | Precio: {first_product_price}")
     
     # Validamos que los datos sean los esperados
