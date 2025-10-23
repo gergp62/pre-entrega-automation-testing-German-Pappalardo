@@ -74,7 +74,7 @@ pip install -r requirements.txt
 Para ejecutar la suite de pruebas completa y generar un reporte HTML, utiliza el siguiente comando desde la terminal (asegúrate de estar en la carpeta raíz del proyecto):
 
 ```bash
-pytest pre-entrega-German-Pappalardo/test_saucedemo.py -v --html=reporte.html
+python -m pytest tests/test_saucedemo.py -v -s --html=reporte.html
 ```
 
 * `-v`: (Verbose) Muestra un resultado más detallado por cada test.
